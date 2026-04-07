@@ -2713,6 +2713,41 @@
         // --- AOS Animációk ---
         AOS.init({ duration: 1000, once: true, offset: 100 });
 
+        // --- GITHUB PAGES MINDENT JAVÍTÓ KÓD ---
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('img').forEach(img => {
+                let currentSrc = img.getAttribute('src');
+                if (currentSrc) {
+                    // 1. Átváltunk a 'kepek' mappára, ha még 'images' lenne
+                    let newSrc = currentSrc.replace('images/', 'kepek/');
+                    
+                    // 2. Kicseréljük a problémás mappaneveket a kódodban fixen az újakra
+                    newSrc = newSrc.replace('Portrék, Petya', 'portre_petya')
+                                   .replace('Portrék, Állat', 'portre_allat')
+                                   .replace('Francia Alpok 25', 'alpok_25')
+                                   .replace('Pályázatra, Sport, GÓL GÓL GÓL', 'palyazat_sport')
+                                   .replace('Pályázatra, Ember ábrázolás', 'palyazat_ember')
+                                   .replace('Pályázatra, Természet, Mehet', 'palyazat_termeszet')
+                                   .replace('Day-Out, 2025.07.17. Grizzly', 'dayout_grizzly_1')
+                                   .replace('Day-Out, 2025.07.19. Nagybarca', 'dayout_nagybarca')
+                                   .replace('Day-Out, 2025.09.28. Sörbár', 'dayout_sorbar_1')
+                                   .replace('Day-Out, 2025.12.27. Sörbár', 'dayout_sorbar_2')
+                                   .replace('Day-Out, 2026.02.08. Kocsonya', 'dayout_kocsonya')
+                                   .replace('Day-Out, 2026.03.19. Grizzly', 'dayout_grizzly_2')
+                                   .replace('Lévays események, Diáknagykövet', 'levay_diaknagykovet')
+                                   .replace('Lévays események, Évnyitó (25-26)', 'levay_evnyito')
+                                   .replace('Kézilabda, 25,26 Petyáék, 2025.10.12.(2)', 'kezilabda_petya')
+                                   .replace('Kézilabda, 2025.04.27', 'kezilabda_0427')
+                                   .replace('Kézilabda, Veszprém vs DVTK, Pályázat', 'kezilabda_dvtk')
+                                   .replace('Koncertek, Top 68', 'koncert_top68')
+                                   .replace('Néptánc, 2025.02.15,16 Kocsonyafeszt', 'neptanc_kocsonya');
+
+                    // 3. GitHub kompatibilis karakterkódolás (szóközök és ékezetek fixálása)
+                    img.src = encodeURI(newSrc);
+                }
+            });
+        });
+
         // --- 1. Sötétszoba mód ---
         const darkroomToggle = document.getElementById('darkroom-toggle');
         darkroomToggle.addEventListener('click', (e) => {
