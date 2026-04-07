@@ -2710,150 +2710,66 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // --- AOS Animációk ---
+        // --- 1. GLOBÁLIS BEÁLLÍTÁSOK ÉS KÉPFIXÁLÓ ---
         AOS.init({ duration: 1000, once: true, offset: 100 });
 
-        // --- GITHUB PAGES MINDENT JAVÍTÓ KÓD ---
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll('img').forEach(img => {
-                let currentSrc = img.getAttribute('src');
-                if (currentSrc) {
-                    // 1. Átváltunk a 'kepek' mappára, ha még 'images' lenne
-                    let newSrc = currentSrc.replace('images/', 'kepek/');
-                    
-                    // 2. Kicseréljük a problémás mappaneveket a kódodban fixen az újakra
-                    newSrc = newSrc.replace('Portrék, Petya', 'portre_petya')
-                                   .replace('Portrék, Állat', 'portre_allat')
-                                   .replace('Francia Alpok 25', 'alpok_25')
-                                   .replace('Pályázatra, Sport, GÓL GÓL GÓL', 'palyazat_sport')
-                                   .replace('Pályázatra, Ember ábrázolás', 'palyazat_ember')
-                                   .replace('Pályázatra, Természet, Mehet', 'palyazat_termeszet')
-                                   .replace('Day-Out, 2025.07.17. Grizzly', 'dayout_grizzly_1')
-                                   .replace('Day-Out, 2025.07.19. Nagybarca', 'dayout_nagybarca')
-                                   .replace('Day-Out, 2025.09.28. Sörbár', 'dayout_sorbar_1')
-                                   .replace('Day-Out, 2025.12.27. Sörbár', 'dayout_sorbar_2')
-                                   .replace('Day-Out, 2026.02.08. Kocsonya', 'dayout_kocsonya')
-                                   .replace('Day-Out, 2026.03.19. Grizzly', 'dayout_grizzly_2')
-                                   .replace('Lévays események, Diáknagykövet', 'levay_diaknagykovet')
-                                   .replace('Lévays események, Évnyitó (25-26)', 'levay_evnyito')
-                                   .replace('Kézilabda, 25,26 Petyáék, 2025.10.12.(2)', 'kezilabda_petya')
-                                   .replace('Kézilabda, 2025.04.27', 'kezilabda_0427')
-                                   .replace('Kézilabda, Veszprém vs DVTK, Pályázat', 'kezilabda_dvtk')
-                                   .replace('Koncertek, Top 68', 'koncert_top68')
-                                   .replace('Néptánc, 2025.02.15,16 Kocsonyafeszt', 'neptanc_kocsonya');
+        function getCleanSrc(rawSrc) {
+            if (!rawSrc) return "";
+            let newSrc = rawSrc.replace('images/', 'kepek/');
+            newSrc = newSrc.replace('Portrék, Petya', 'portre_petya')
+                           .replace('Portrék, Állat', 'portre_allat')
+                           .replace('Francia Alpok 25', 'alpok_25')
+                           .replace('Pályázatra, Sport, GÓL GÓL GÓL', 'palyazat_sport')
+                           .replace('Pályázatra, Ember ábrázolás', 'palyazat_ember')
+                           .replace('Pályázatra, Természet, Mehet', 'palyazat_termeszet')
+                           .replace('Day-Out, 2025.07.17. Grizzly', 'dayout_grizzly_1')
+                           .replace('Day-Out, 2025.07.19. Nagybarca', 'dayout_nagybarca')
+                           .replace('Day-Out, 2025.09.28. Sörbár', 'dayout_sorbar_1')
+                           .replace('Day-Out, 2025.12.27. Sörbár', 'dayout_sorbar_2')
+                           .replace('Day-Out, 2026.02.08. Kocsonya', 'dayout_kocsonya')
+                           .replace('Day-Out, 2026.03.19. Grizzly', 'dayout_grizzly_2')
+                           .replace('Lévays események, Diáknagykövet', 'levay_diaknagykovet')
+                           .replace('Lévays események, Évnyitó (25-26)', 'levay_evnyito')
+                           .replace('Kézilabda, 25,26 Petyáék, 2025.10.12.(2)', 'kezilabda_petya')
+                           .replace('Kézilabda, 2025.04.27', 'kezilabda_0427')
+                           .replace('Kézilabda, Veszprém vs DVTK, Pályázat', 'kezilabda_dvtk')
+                           .replace('Koncertek, Top 68', 'koncert_top68')
+                           .replace('Néptánc, 2025.02.15,16 Kocsonyafeszt', 'neptanc_kocsonya');
+            return encodeURI(newSrc);
+        }
 
-                    // 3. GitHub kompatibilis karakterkódolás (szóközök és ékezetek fixálása)
-                    img.src = encodeURI(newSrc);
-                }
-            });
+        // Összes kép javítása az oldalon
+        document.querySelectorAll('img').forEach(img => {
+            const original = img.getAttribute('src');
+            if(original && (original.includes('images/') || original.includes('kepek/'))) {
+                img.src = getCleanSrc(original);
+            }
         });
 
-        // --- 1. Sötétszoba mód ---
+        // --- 2. SÖTÉTSZOBA MÓD ---
         const darkroomToggle = document.getElementById('darkroom-toggle');
         darkroomToggle.addEventListener('click', (e) => {
             e.preventDefault();
             document.body.classList.toggle('darkroom-mode');
             const icon = darkroomToggle.querySelector('i');
-            if (document.body.classList.contains('darkroom-mode')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
+            icon.className = document.body.classList.contains('darkroom-mode') ? 'fas fa-sun' : 'fas fa-moon';
         });
 
-        // --- 2. Kamera Vaku Easter Egg ---
-        const logo = document.getElementById('secret-logo');
-        const overlay = document.getElementById('easter-egg-overlay');
-        const countdownText = document.getElementById('countdown-text');
-        const flashScreen = document.getElementById('flash-screen');
-        let isFlashing = false;
-
-        logo.addEventListener('click', () => {
-            if (isFlashing) return;
-            isFlashing = true;
-            let count = 3;
-            countdownText.innerText = count;
-            overlay.classList.add('active');
-
-            const countdownInterval = setInterval(() => {
-                count--;
-                if (count > 0) {
-                    countdownText.innerText = count;
-                } else {
-                    clearInterval(countdownInterval);
-                    flashScreen.classList.remove('fade-out');
-                    flashScreen.classList.add('flash');
-                    overlay.classList.remove('active');
-
-                    setTimeout(() => {
-                        flashScreen.classList.remove('flash');
-                        flashScreen.classList.add('fade-out');
-                        setTimeout(() => { isFlashing = false; }, 1500);
-                    }, 150);
-                }
-            }, 1000);
-        });
-
-        // --- 3. Ugrás a tetejére gomb ---
-        const backToTopBtn = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // --- 4. Kategória Szűrő ---
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filterValue = btn.getAttribute('data-filter');
-
-                galleryItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.classList.remove('hide');
-                    } else {
-                        item.classList.add('hide');
-                    }
-                });
-
-                document.querySelector('.gallery-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-                // ÚJ: Frissítjük a lapozható képek listáját, hogy csak a láthatókat lehessen pörgetni!
-                updateClickableImages();
-            });
-        });
-
-        // --- 5. LIGHTBOX (Képnézegető LAPOZÁSSAL) LOGIKA ---
+        // --- 3. LIGHTBOX NAVIGÁCIÓVAL ---
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.querySelector('.lightbox-close');
         const prevBtn = document.getElementById('lightbox-prev');
         const nextBtn = document.getElementById('lightbox-next');
+        
+        let currentImages = [];
+        let currentIndex = 0;
 
-        let currentImages = []; // Az aktuálisan látható képek listája
-        let currentIndex = 0;   // Hanyadik képet nézzük éppen
-
-        // Ez a funkció kikeresi a látható képeket, és rájuk teszi a kattintást
         const updateClickableImages = () => {
+            // Csak a nem rejtett képeket gyűjtjük össze
             currentImages = Array.from(document.querySelectorAll('.featured-img-wrapper img, .gallery-item:not(.hide) img'));
-
             currentImages.forEach((img, index) => {
-                img.onclick = null; // Töröljük a régit, hogy ne duplikálódjon
-                img.onclick = function () {
-                    openLightbox(index);
-                };
+                img.onclick = () => openLightbox(index);
             });
         };
 
@@ -2861,42 +2777,25 @@
             currentIndex = index;
             lightboxImg.src = currentImages[currentIndex].src;
             lightbox.style.display = "flex";
-            setTimeout(() => { lightbox.classList.add('show'); }, 10);
-            document.body.style.overflow = 'hidden'; // Nincs görgetés a háttérben
+            setTimeout(() => lightbox.classList.add('show'), 10);
+            document.body.style.overflow = 'hidden';
         };
 
         const closeLightbox = () => {
             lightbox.classList.remove('show');
-            setTimeout(() => { lightbox.style.display = "none"; }, 400);
-            document.body.style.overflow = 'auto'; // Visszaadjuk a görgetést
+            setTimeout(() => lightbox.style.display = "none", 400);
+            document.body.style.overflow = 'auto';
         };
 
-        // Következő kép
-        const showNext = () => {
-            currentIndex = (currentIndex + 1) % currentImages.length;
-            lightboxImg.src = currentImages[currentIndex].src;
-        };
+        const showNext = (e) => { if(e) e.stopPropagation(); currentIndex = (currentIndex + 1) % currentImages.length; lightboxImg.src = currentImages[currentIndex].src; };
+        const showPrev = (e) => { if(e) e.stopPropagation(); currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; lightboxImg.src = currentImages[currentIndex].src; };
 
-        // Előző kép
-        const showPrev = () => {
-            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-            lightboxImg.src = currentImages[currentIndex].src;
-        };
+        closeBtn.onclick = closeLightbox;
+        nextBtn.onclick = showNext;
+        prevBtn.onclick = showPrev;
+        lightbox.onclick = (e) => { if (e.target !== lightboxImg && e.target !== prevBtn && e.target !== nextBtn) closeLightbox(); };
 
-        // Gombok funkciói
-        closeBtn.addEventListener('click', closeLightbox);
-        nextBtn.addEventListener('click', showNext);
-        prevBtn.addEventListener('click', showPrev);
-
-        // Bezárás a háttérre kattintva (a nyilakat kivéve)
-        lightbox.addEventListener('click', function (e) {
-            if (e.target !== lightboxImg && e.target !== prevBtn && e.target !== nextBtn) {
-                closeLightbox();
-            }
-        });
-
-        // Billentyűzet támogatás (ESC bezár, Nyilak lapoznak)
-        document.addEventListener('keydown', function (e) {
+        document.addEventListener('keydown', (e) => {
             if (lightbox.classList.contains('show')) {
                 if (e.key === "Escape") closeLightbox();
                 if (e.key === "ArrowRight") showNext();
@@ -2904,7 +2803,46 @@
             }
         });
 
-        // Indításkor összeszedjük a képeket
+        // --- 4. SZŰRŐ LOGIKA ---
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) item.classList.remove('hide');
+                    else item.classList.add('hide');
+                });
+                updateClickableImages();
+            });
+        });
+
+        // --- 5. EASTER EGG (Kamera Vaku) ---
+        const logo = document.getElementById('secret-logo');
+        const eeOverlay = document.getElementById('easter-egg-overlay');
+        const cdText = document.getElementById('countdown-text');
+        const flash = document.getElementById('flash-screen');
+        let isFlashing = false;
+
+        logo.onclick = () => {
+            if (isFlashing) return;
+            isFlashing = true;
+            let count = 3;
+            cdText.innerText = count;
+            eeOverlay.classList.add('active');
+            const interval = setInterval(() => {
+                count--;
+                if (count > 0) cdText.innerText = count;
+                else {
+                    clearInterval(interval);
+                    flash.classList.add('flash');
+                    eeOverlay.classList.remove('active');
+                    setTimeout(() => { flash.classList.remove('flash'); flash.classList.add('fade-out'); setTimeout(() => { isFlashing = false; flash.classList.remove('fade-out'); }, 1500); }, 150);
+                }
+            }, 1000);
+        };
+
+        // Indítás
         updateClickableImages();
     </script>
 </body>
