@@ -17,7 +17,7 @@
     <meta name="description" content="Zelenák Emese fotós portfóliója. Portrék, események, természetfotók és sport pillanatok.">
     <meta property="og:title" content="Zelenák Emese | Fotós Portfólió">
     <meta property="og:description" content="Nézd meg a legújabb munkáimat, és fedezzük fel együtt a pillanatok varázsát!">
-    <meta property="og:image" content="images/kiemelt-1.jpg"> 
+    <meta property="og:image" content="kepek/kiemelt-1.jpg"> 
     <meta property="og:url" content="https://zelenakemese.hu"> 
     <meta property="og:type" content="website">
 
@@ -88,7 +88,8 @@
         #flash-screen.flash { opacity: 1; }
         #flash-screen.fade-out { opacity: 0; transition: opacity 1.5s ease-out; }
 
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(34, 21, 24, 0.8), rgba(34, 21, 24, 1)), url('images/hero-bg.jpg') center/cover; padding: 0 20px; }
+        /* A hero háttérképet a JS fogja betölteni a helyes url-lel! */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background-color: #221518; padding: 0 20px; background-size: cover; background-position: center; }
         .hero h1 { font-size: 4rem; margin-bottom: 20px; font-weight: 700; margin-top: 60px; }
         .hero h1 span { color: var(--butter); }
         .hero p { max-width: 600px; font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); }
@@ -99,7 +100,7 @@
         .featured-item { display: flex; align-items: center; gap: 50px; margin-bottom: 100px; }
         .featured-item:nth-child(even) { flex-direction: row-reverse; }
         .featured-img-wrapper { flex: 1; overflow: hidden; border-radius: 8px; box-shadow: 0 10px 30px var(--rose-glow); border: 1px solid var(--rose-glow); max-height: 70vh; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a; }
-        .featured-img-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.8s ease; cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='%23F4C8C8' stroke='%23F4C8C8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z'></path><circle cx='12' cy='13' r='4'></circle></svg>") 14 14, pointer !important;}
+        .featured-img-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.8s ease; }
         .featured-img-wrapper:hover img { transform: scale(1.05); }
         .featured-text { flex: 1; }
         .featured-text h3 { font-size: 2rem; color: var(--classic-rose); margin-bottom: 20px; }
@@ -148,7 +149,7 @@
         ::-webkit-scrollbar-thumb { background: var(--classic-rose-dark); border-radius: 5px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--classic-rose); }
 
-        .lightbox { display: none; position: fixed; z-index: 99999; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(10, 5, 7, 0.95); backdrop-filter: blur(8px); opacity: 0; transition: opacity 0.4s ease; cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='%23F4C8C8' stroke='%23F4C8C8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z'></path><circle cx='12' cy='13' r='4'></circle></svg>") 14 14, pointer !important; }
+        .lightbox { display: none; position: fixed; z-index: 99999; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(10, 5, 7, 0.95); backdrop-filter: blur(8px); opacity: 0; transition: opacity 0.4s ease; }
         .lightbox.show { display: flex; justify-content: center; align-items: center; opacity: 1; }
         .lightbox-content { margin: auto; display: block; max-width: 90%; max-height: 90vh; box-shadow: 0 0 40px rgba(0, 0, 0, 0.9); border-radius: 4px; border: 1px solid var(--rose-glow); transform: scale(0.8); transition: transform 0.4s ease; cursor: auto; }
         .lightbox.show .lightbox-content { transform: scale(1); }
@@ -189,7 +190,7 @@
 
         <div class="featured-item priority-item" data-aos="fade-up">
             <div class="featured-img-wrapper">
-                <img src="images/Pályázatra, Sport, GÓL GÓL GÓL/GÓL GÓL GÓL.jpeg" loading="lazy" alt="GÓL GÓL GÓL">
+                <img src="kepek/palyazat_sport/GÓL GÓL GÓL.jpeg" loading="lazy" alt="GÓL GÓL GÓL">
             </div>
             <div class="featured-text">
                 <h3>GÓL GÓL GÓL!</h3>
@@ -199,7 +200,7 @@
 
         <div class="featured-item">
             <div class="featured-img-wrapper" data-aos="fade-right">
-                <img src="images/Portrék, Petya/Vágy a szabadságra.jpeg" loading="lazy" alt="Vágy a szabadságra">
+                <img src="kepek/portre_petya/Vágy a szabadságra.jpeg" loading="lazy" alt="Vágy a szabadságra">
             </div>
             <div class="featured-text" data-aos="fade-left">
                 <h3>Vágy a szabadságra</h3>
@@ -209,7 +210,7 @@
 
         <div class="featured-item">
             <div class="featured-img-wrapper" data-aos="fade-left">
-                <img src="images/Portrék, Petya/kész.jpg" loading="lazy" alt="Kész">
+                <img src="kepek/portre_petya/kész.jpg" loading="lazy" alt="Kész">
             </div>
             <div class="featured-text" data-aos="fade-right">
                 <h3>Péter</h3>
@@ -219,7 +220,7 @@
 
         <div class="featured-item">
             <div class="featured-img-wrapper" data-aos="fade-right">
-                <img src="images/Portrék, Állat/Nemes vad.jpeg" loading="lazy" alt="Nemes vad">
+                <img src="kepek/portre_allat/Nemes vad.jpeg" loading="lazy" alt="Nemes vad">
             </div>
             <div class="featured-text" data-aos="fade-left">
                 <h3>Nemes vad</h3>
@@ -229,121 +230,121 @@
 
         <div class="featured-item">
             <div class="featured-img-wrapper" data-aos="fade-left">
-                <img src="images/Portrék, Állat/A szem a lélek tükre.jpeg" loading="lazy" alt="A szem a lélek tükre">
+                <img src="kepek/portre_allat/A szem a lélek tükre.jpeg" loading="lazy" alt="A szem a lélek tükre">
             </div>
             <div class="featured-text" data-aos="fade-right">
                 <h3>A szem a lélek tükre</h3>
-                <p>Amikor Zakopanéban jártam, a főutcán találkoztam egy gyönyörű kancával aki egy szekér elé volt befogva. "Ha fizetsz, mehetünk egy kört"- ez lógott a szekere oldalán. Összenéztünk. Láttam a szemében hogy már várja a műszak végét.</p>
-            </div>
-        </div>
-
-        <div class="featured-item">
-            <div class="featured-img-wrapper" data-aos="fade-left">
-                <img src="images/Pályázatra, Természet, Mehet/Ősz és Tél.jpeg" loading="lazy" alt="Ősz és Tél">
-            </div>
-            <div class="featured-text" data-aos="fade-right">
-                <h3>Ősz és Tél találkozása</h3>
-                <p>Ide írhatod le az évszakok váltakozásának hangulatát, a színeket és az atmoszférát, amit a lencséden keresztül örökítettél meg.</p>
+                <p>Amikor Zakopanéban jártam, a főutcán találkoztam egy gyönyörű kancával aki egy szekér elé volt befogva. Összenéztünk. Láttam a szemében hogy már várja a műszak végét.</p>
             </div>
         </div>
 
         <div class="featured-item">
             <div class="featured-img-wrapper" data-aos="fade-right">
-                <img src="images/Pályázatra, Ember ábrázolás/Napsütötte zöld mező.jpeg" loading="lazy" alt="Napsütötte zöld mező">
+                <img src="kepek/palyazat_termeszet/Ősz és Tél.jpeg" loading="lazy" alt="Ősz és Tél">
             </div>
             <div class="featured-text" data-aos="fade-left">
+                <h3>Ősz és Tél találkozása</h3>
+                <p>Az évszakok váltakozásának hangulata, a színek és az atmoszféra találkozása a lencsémen keresztül.</p>
+            </div>
+        </div>
+
+        <div class="featured-item">
+            <div class="featured-img-wrapper" data-aos="fade-left">
+                <img src="kepek/palyazat_ember/Napsütötte zöld mező.jpeg" loading="lazy" alt="Napsütötte zöld mező">
+            </div>
+            <div class="featured-text" data-aos="fade-right">
                 <h3>Napsütötte zöld mező</h3>
                 <p>Egy barátommal pont jókor mentünk fel az Avasi kilátóba fotózásra, ugyanis csak addig sütött a nap míg mi ott voltunk.</p>
             </div>
         </div>
 
         <div class="featured-item">
-            <div class="featured-img-wrapper" data-aos="fade-left">
-                <img src="images/Francia Alpok 25/6 (TS).jpeg" loading="lazy" alt="Francia Alpok">
+            <div class="featured-img-wrapper" data-aos="fade-right">
+                <img src="kepek/alpok_25/6 (TS).jpeg" loading="lazy" alt="Francia Alpok">
             </div>
-            <div class="featured-text" data-aos="fade-right">
+            <div class="featured-text" data-aos="fade-left">
                 <h3>A fenséges Alpok I.</h3>
-                <p>Oszd meg a hegyek között átélt élményeidet, a hatalmas tereket és a végtelen hósipkákat!</p>
+                <p>A hatalmas terek és a végtelen hósipkák élménye a hegyek között.</p>
             </div>
         </div>
 
         <div class="featured-item">
-            <div class="featured-img-wrapper" data-aos="fade-right">
-                <img src="images/Francia Alpok 25/2 (TS).jpeg" loading="lazy" alt="Francia Alpok 2">
+            <div class="featured-img-wrapper" data-aos="fade-left">
+                <img src="kepek/alpok_25/2 (TS).jpeg" loading="lazy" alt="Francia Alpok 2">
             </div>
-            <div class="featured-text" data-aos="fade-left">
+            <div class="featured-text" data-aos="fade-right">
                 <h3>A fenséges Alpok II.</h3>
-                <p>És itt jöhet a második francia alpoki tájképhez tartozó gondolatod.</p>
+                <p>Az Alpok vonulatai egy másik perspektívából megörökítve.</p>
             </div>
         </div>
 
         <div class="featured-item">
-            <div class="featured-img-wrapper" data-aos="fade-left">
-                <img src="images/Francia Alpok 25/Mont-Blanc.jpeg" loading="lazy" alt="Mont-Blanc">
+            <div class="featured-img-wrapper" data-aos="fade-right">
+                <img src="kepek/alpok_25/Mont-Blanc.jpeg" loading="lazy" alt="Mont-Blanc">
             </div>
-            <div class="featured-text" data-aos="fade-right">
+            <div class="featured-text" data-aos="fade-left">
                 <h3>Mont-Blanc</h3>
-                <p>A francia Chamonix-ba látogattam 2025 áprilisában, ott készült ez a kép.</p>
-            </div>
-        </div>
-
-        <div class="featured-item">
-            <div class="featured-img-wrapper" data-aos="fade-right">
-                <img src="images/Francia Alpok 25/Ígéret.jpeg" loading="lazy" alt="Ígéret">
-            </div>
-            <div class="featured-text" data-aos="fade-left">
-                <h3>Ígéret</h3>
-                <p>A Bledi-tónál egy idős házaspár levette a régi, egy két helyen már rozsdás, szívecske alakú lakatot. Majd ezt az újat tették a helyére. "Az ajándék sohasem ér annyit, mint az ígéret. Az ígéretnek örülünk, az ajándékból kiábrándulunk." - Thomas Raucat</p>
+                <p>A francia Chamonix-ban készült felvétel 2025 áprilisában.</p>
             </div>
         </div>
 
         <div class="featured-item">
             <div class="featured-img-wrapper" data-aos="fade-left">
-                <img src="images/Francia Alpok 25/Benőtt.jpeg" loading="lazy" alt="Benőtt">
+                <img src="kepek/alpok_25/Ígéret.jpeg" loading="lazy" alt="Ígéret">
             </div>
             <div class="featured-text" data-aos="fade-right">
-                <h3>Benőtt</h3>
-                <p>Egy öreg fa tuskója a domboldalon. A fölé hajló ágakon átszűrődő napfény világítja meg a tavaszi zöldet.</p>
+                <h3>Ígéret</h3>
+                <p>A Bledi-tónál egy idős házaspár levette a régi lakatot, és ezt az újat tették a helyére. "Az ajándék sohasem ér annyit, mint az ígéret."</p>
             </div>
         </div>
 
         <div class="featured-item">
             <div class="featured-img-wrapper" data-aos="fade-right">
-                <img src="images/Francia Alpok 25/Ház az erdő közepén.jpeg" loading="lazy" alt="Ház az erdő közepén">
+                <img src="kepek/alpok_25/Benőtt.jpeg" loading="lazy" alt="Benőtt">
             </div>
             <div class="featured-text" data-aos="fade-left">
+                <h3>Benőtt</h3>
+                <p>Egy öreg fa tuskója a domboldalon. Az ágakon átszűrődő napfény világítja meg a tavaszi zöldet.</p>
+            </div>
+        </div>
+
+        <div class="featured-item">
+            <div class="featured-img-wrapper" data-aos="fade-left">
+                <img src="kepek/alpok_25/Ház az erdő közepén.jpeg" loading="lazy" alt="Ház az erdő közepén">
+            </div>
+            <div class="featured-text" data-aos="fade-right">
                 <h3>Ház az erdő közepén</h3>
                 <p>Ki ne szeretne néha a lehető legmesszebb költözni az emberektől egy kis csöndért?</p>
             </div>
         </div>
 
         <div class="featured-item">
-            <div class="featured-img-wrapper" data-aos="fade-left">
-                <img src="images/Francia Alpok 25/Barbara.jpeg" loading="lazy" alt="Ember a természetben">
+            <div class="featured-img-wrapper" data-aos="fade-right">
+                <img src="kepek/alpok_25/Barbara.jpeg" loading="lazy" alt="Ember a természetben">
             </div>
-            <div class="featured-text" data-aos="fade-right">
+            <div class="featured-text" data-aos="fade-left">
                 <h3>Ember a természetben</h3>
-                <p>Ez a kép egy eldugott részén készült Szlovéniának. Ahol nem háborgatja az ember a helyi élővilágot. Nagyon csendes és nyugodt volt minden. Ide még egyszer vissza kell mennem.</p>
+                <p>Szlovénia egy eldugott része, ahol a csend és nyugalom uralkodik az élővilág felett.</p>
             </div>
         </div>
 
         <div class="featured-item">
-            <div class="featured-img-wrapper" data-aos="fade-right">
-                <img src="images/Francia Alpok 25/Szlovénia.jpeg" loading="lazy" alt="Szlovénia">
+            <div class="featured-img-wrapper" data-aos="fade-left">
+                <img src="kepek/alpok_25/Szlovénia.jpeg" loading="lazy" alt="Szlovénia">
             </div>
-            <div class="featured-text" data-aos="fade-left">
+            <div class="featured-text" data-aos="fade-right">
                 <h3>Szlovénia</h3>
                 <p>Szép, békés táj. Akkor, abban a pillanatban csak erre volt szükségem.</p>
             </div>
         </div>
 
         <div class="featured-item">
-            <div class="featured-img-wrapper" data-aos="fade-left">
-                <img src="images/Francia Alpok 25/Babaház.jpeg" loading="lazy" alt="Babaház">
+            <div class="featured-img-wrapper" data-aos="fade-right">
+                <img src="kepek/alpok_25/Babaház.jpeg" loading="lazy" alt="Babaház">
             </div>
-            <div class="featured-text" data-aos="fade-right">
+            <div class="featured-text" data-aos="fade-left">
                 <h3>Babaház</h3>
-                <p>Szlovéniában, a Bledi-tónál kirándultam amikor megpillantottam ezt az épületet. Az első gondolatom ez volt: egy para Barbie ház.</p>
+                <p>A Bledi-tónál megpillantott épület, ami egy különös Barbie házra emlékeztetett.</p>
             </div>
         </div>
     </section>
@@ -394,409 +395,409 @@
         </div>
 
         <div class="masonry-grid" id="gallery-grid">
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0100.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0103.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0104.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0107.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0118.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0124.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0127.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0129.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0145.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0147.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0149.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0155.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0159.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0161.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0163.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0170.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/IMG_0786.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0007.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0010.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0016.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0018.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0019.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0022.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0027.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0029.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0030.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0039.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0041.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0044.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0045.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0046.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0048.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0052.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0059.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0062.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0064.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0066.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0071.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0073.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0079.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0080.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0092.jpeg" loading="lazy" alt="Grizzly"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2025.07.17. Grizzly/_MG_0099.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0100.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0103.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0104.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0107.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0118.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0124.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0127.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0129.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0145.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0147.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0149.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0155.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0159.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0161.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0163.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0170.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/IMG_0786.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0007.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0010.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0016.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0018.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0019.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0022.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0027.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0029.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0030.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0039.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0041.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0044.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0045.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0046.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0048.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0052.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0059.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0062.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0064.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0066.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0071.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0073.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0079.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0080.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0092.jpeg" loading="lazy" alt="Grizzly"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_1/_MG_0099.jpeg" loading="lazy" alt="Grizzly"></div>
 
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0139.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0147.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0151.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0157.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0177.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0218.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0225.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0226.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0254.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0260.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0262.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0264.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0265.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0272.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0277.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0281.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0284.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0288.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0296.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0299.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0301.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0304.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0313.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0314.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0317.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0319.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0333.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0345.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0358.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0361.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0367.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0374.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0381.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0394.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0402.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0408.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0418.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0423.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0440.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0453.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0461.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0467.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0483.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0001.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0002.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0012.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0019.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0020.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0021.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0038.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0044.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0049.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0074.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0083.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0087.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0099.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0111.jpeg" loading="lazy" alt="Grizzly 2026"></div>
-            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="images/Day-Out, 2026.03.19. Grizzly/IMG_0135.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0139.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0147.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0151.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0157.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0177.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0218.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0225.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0226.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0254.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0260.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0262.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0264.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0265.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0272.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0277.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0281.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0284.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0288.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0296.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0299.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0301.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0304.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0313.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0314.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0317.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0319.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0333.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0345.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0358.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0361.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0367.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0374.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0381.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0394.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0402.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0408.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0418.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0423.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0440.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0453.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0461.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0467.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0483.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0001.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0002.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0012.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0019.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0020.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0021.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0038.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0044.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0049.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0074.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0083.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0087.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0099.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0111.jpeg" loading="lazy" alt="Grizzly 2026"></div>
+            <div class="gallery-item" data-category="day-out-grizzly" data-aos="fade-up"><img src="kepek/dayout_grizzly_2/IMG_0135.jpeg" loading="lazy" alt="Grizzly 2026"></div>
 
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0152.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0164.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0174.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0188.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0190.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0196.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0198.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0208.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0215.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0218.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0221.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0227.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0229.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0230.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0232.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0236.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0237.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0238.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0241.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0249.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0251.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/1.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/3.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/6.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/Falunap 1.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/Falunap 2.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/Falunap 3.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/Falunap 4.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/Falunap 5.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/Falunap 6.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0001.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0003.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0025.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0034.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0038.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0039.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0041.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0050.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0052.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0057.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0063.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0069.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0071.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0074.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0087.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0090.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0097.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0098.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0111.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0112.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0114.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0119.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0120.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0122.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0130.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0147.jpeg" loading="lazy" alt="Nagybarca"></div>
-            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="images/Day-Out, 2025.07.19. Nagybarca/_MG_0149.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0152.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0164.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0174.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0188.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0190.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0196.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0198.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0208.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0215.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0218.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0221.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0227.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0229.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0230.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0232.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0236.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0237.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0238.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0241.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0249.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0251.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/1.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/3.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/6.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/Falunap 1.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/Falunap 2.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/Falunap 3.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/Falunap 4.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/Falunap 5.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/Falunap 6.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0001.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0003.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0025.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0034.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0038.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0039.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0041.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0050.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0052.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0057.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0063.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0069.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0071.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0074.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0087.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0090.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0097.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0098.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0111.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0112.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0114.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0119.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0120.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0122.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0130.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0147.jpeg" loading="lazy" alt="Nagybarca"></div>
+            <div class="gallery-item" data-category="day-out-nagybarca" data-aos="fade-up"><img src="kepek/dayout_nagybarca/_MG_0149.jpeg" loading="lazy" alt="Nagybarca"></div>
 
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0350.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0353.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0368.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0375.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/1.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/3.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/8.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0050.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0062.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0078.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0087.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0098.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0106.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0122.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0266.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0291.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0312.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0342.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.09.28. Sörbár/IMG_0346.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0216.jpg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0238.jpg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0249.jpg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0293.jpg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0299.jpg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/3.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/4.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/7.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/8.jpg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/Csend 1.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/Csend 2.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/Csend 3.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/Csend 4.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/Csend 5.jpg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/Csend 6.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0008.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0012.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0020.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0042.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0045.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0055.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0061.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0091.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0096.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0109.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0115.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0126.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0136.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0158.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0173.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0180.jpeg" loading="lazy" alt="Sörbár"></div>
-            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="images/Day-Out, 2025.12.27. Sörbár/IMG_0202.jpg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0350.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0353.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0368.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0375.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/1.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/3.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/8.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0050.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0062.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0078.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0087.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0098.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0106.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0122.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0266.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0291.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0312.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0342.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_1/IMG_0346.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0216.jpg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0238.jpg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0249.jpg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0293.jpg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0299.jpg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/3.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/4.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/7.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/8.jpg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/Csend 1.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/Csend 2.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/Csend 3.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/Csend 4.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/Csend 5.jpg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/Csend 6.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0008.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0012.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0020.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0042.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0045.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0055.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0061.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0091.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0096.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0109.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0115.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0126.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0136.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0158.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0173.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0180.jpeg" loading="lazy" alt="Sörbár"></div>
+            <div class="gallery-item" data-category="day-out-sorbar" data-aos="fade-up"><img src="kepek/dayout_sorbar_2/IMG_0202.jpg" loading="lazy" alt="Sörbár"></div>
 
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0143.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0151.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0156.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0171.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0185.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0187.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0191.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0206.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0207.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0211.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0216.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0218.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0223.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0234.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0250.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0265.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0279.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0300.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0308.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0317.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0320.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0325.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0340.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0006.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0010.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0011.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0013.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0019.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0022.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0029.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0033.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0036.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0039.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0041.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0045.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0055.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0061.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0072.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0075.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0077.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0085.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0089.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0090.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0091.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0093.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0098.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0103.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0105.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0108.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0115.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Day-Out, 2026.02.08. Kocsonya/IMG_0117.jpeg" loading="lazy" alt="Kocsonya"></div>
-            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="images/Néptánc, 2025.02.15,16 Kocsonyafeszt/IMG_0061.jpeg" loading="lazy" alt="Néptánc Kocsonyafeszt"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0143.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0151.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0156.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0171.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0185.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0187.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0191.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0206.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0207.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0211.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0216.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0218.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0223.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0234.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0250.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0265.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0279.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0300.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0308.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0317.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0320.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0325.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0340.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0006.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0010.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0011.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0013.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0019.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0022.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0029.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0033.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0036.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0039.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0041.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0045.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0055.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0061.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0072.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0075.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0077.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0085.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0089.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0090.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0091.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0093.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0098.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0103.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0105.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0108.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0115.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/dayout_kocsonya/IMG_0117.jpeg" loading="lazy" alt="Kocsonya"></div>
+            <div class="gallery-item" data-category="day-out-kocsonya" data-aos="fade-up"><img src="kepek/neptanc_kocsonya/IMG_0061.jpeg" loading="lazy" alt="Néptánc Kocsonyafeszt"></div>
 
-            <div class="gallery-item" data-category="francia-alpok" data-aos="fade-up"><img src="images/Francia Alpok 25/6 (TS).jpeg" loading="lazy" alt="Alpok"></div>
-            <div class="gallery-item" data-category="francia-alpok" data-aos="fade-up"><img src="images/Francia Alpok 25/2 (TS).jpeg" loading="lazy" alt="Alpok"></div>
+            <div class="gallery-item" data-category="francia-alpok" data-aos="fade-up"><img src="kepek/alpok_25/6 (TS).jpeg" loading="lazy" alt="Alpok"></div>
+            <div class="gallery-item" data-category="francia-alpok" data-aos="fade-up"><img src="kepek/alpok_25/2 (TS).jpeg" loading="lazy" alt="Alpok"></div>
 
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0339.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0343.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0348.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0355.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0359.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0361.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0372.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/1 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/2 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/3 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/4 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/5 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/6 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/7 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/8 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/9 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/10 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0137.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0150.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0151.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0152.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0158.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0164.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0168.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0176.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0180.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0186.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0188.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0191.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0194.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0212.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0214.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0220.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0228.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0237.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0243.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0245.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0285.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0286.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0299.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0304.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0314.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0317.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0318.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0321.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0334.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
-            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="images/Kézilabda, 25,26 Petyáék, 2025.10.12.(2)/IMG_0338.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0339.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0343.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0348.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0355.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0359.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0361.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0372.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/1 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/2 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/3 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/4 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/5 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/6 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/7 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/8 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/9 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/10 (SS).jpeg" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0137.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0150.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0151.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0152.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0158.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0164.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0168.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0176.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0180.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0186.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0188.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0191.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0194.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0212.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0214.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0220.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0228.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0237.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0243.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0245.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0285.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0286.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0299.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0304.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0314.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0317.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0318.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0321.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0334.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
+            <div class="gallery-item" data-category="kezilabda-testver" data-aos="fade-up"><img src="kepek/kezilabda_petya/IMG_0338.JPG" loading="lazy" alt="Kézilabda Testvér"></div>
 
-            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="images/Kézilabda, 2025.04.27/7 (SS).jpeg" loading="lazy" alt="Kézilabda"></div>
-            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="images/Kézilabda, 2025.04.27/Meccs 1.jpeg" loading="lazy" alt="Kézilabda"></div>
-            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="images/Kézilabda, 2025.04.27/Meccs 2.jpeg" loading="lazy" alt="Kézilabda"></div>
-            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="images/Kézilabda, 2025.04.27/Meccs 3.jpeg" loading="lazy" alt="Kézilabda"></div>
-            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="images/Kézilabda, 2025.04.27/Meccs 4.jpeg" loading="lazy" alt="Kézilabda"></div>
-            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="images/Kézilabda, 2025.04.27/Meccs 5.jpeg" loading="lazy" alt="Kézilabda"></div>
-            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="images/Kézilabda, 2025.04.27/Meccs 6.jpeg" loading="lazy" alt="Kézilabda"></div>
-            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="images/Kézilabda, 2025.04.27/3 (SS).jpeg" loading="lazy" alt="Kézilabda"></div>
-            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="images/Kézilabda, 2025.04.27/5 (SS).jpeg" loading="lazy" alt="Kézilabda"></div>
+            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="kepek/kezilabda_0427/7 (SS).jpeg" loading="lazy" alt="Kézilabda"></div>
+            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="kepek/kezilabda_0427/Meccs 1.jpeg" loading="lazy" alt="Kézilabda"></div>
+            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="kepek/kezilabda_0427/Meccs 2.jpeg" loading="lazy" alt="Kézilabda"></div>
+            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="kepek/kezilabda_0427/Meccs 3.jpeg" loading="lazy" alt="Kézilabda"></div>
+            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="kepek/kezilabda_0427/Meccs 4.jpeg" loading="lazy" alt="Kézilabda"></div>
+            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="kepek/kezilabda_0427/Meccs 5.jpeg" loading="lazy" alt="Kézilabda"></div>
+            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="kepek/kezilabda_0427/Meccs 6.jpeg" loading="lazy" alt="Kézilabda"></div>
+            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="kepek/kezilabda_0427/3 (SS).jpeg" loading="lazy" alt="Kézilabda"></div>
+            <div class="gallery-item" data-category="kezilabda-0427" data-aos="fade-up"><img src="kepek/kezilabda_0427/5 (SS).jpeg" loading="lazy" alt="Kézilabda"></div>
 
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/Együtt erősebbek vagyunk.jpeg" loading="lazy" alt="DVTK meccs"></div>
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/Hatoson belül.jpeg" loading="lazy" alt="DVTK meccs"></div>
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/Ítélet születik.jpeg" loading="lazy" alt="DVTK meccs"></div>
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/Két csapat, két történet.jpeg" loading="lazy" alt="DVTK meccs"></div>
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/Pontos passz.jpeg" loading="lazy" alt="DVTK meccs"></div>
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/Repülés a győzelem felé.jpeg" loading="lazy" alt="DVTK meccs"></div>
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/Védekezés felsőfokon.jpeg" loading="lazy" alt="DVTK meccs"></div>
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/A csapatkapitány utat mutat.jpeg" loading="lazy" alt="DVTK meccs"></div>
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/A nevek, akikért ma szurkolunk.jpeg" loading="lazy" alt="DVTK meccs"></div>
-            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="images/Kézilabda, Veszprém vs DVTK, Pályázat/Döntő pillanatok a pályán.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/Együtt erősebbek vagyunk.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/Hatoson belül.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/Ítélet születik.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/Két csapat, két történet.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/Pontos passz.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/Repülés a győzelem felé.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/Védekezés felsőfokon.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/A csapatkapitány utat mutat.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/A nevek, akikért ma szurkolunk.jpeg" loading="lazy" alt="DVTK meccs"></div>
+            <div class="gallery-item" data-category="kezilabda-dvtk" data-aos="fade-up"><img src="kepek/kezilabda_dvtk/Döntő pillanatok a pályán.jpeg" loading="lazy" alt="DVTK meccs"></div>
 
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0040.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0049.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0050.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0053.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0054.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0057.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0059.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0061.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0064.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0001.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0002.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0003.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0004.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0006.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0008.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0009.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0014.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0016.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0018.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0022.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0025.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0026.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0027.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0034.jpeg" loading="lazy" alt="Top 68"></div>
-            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="images/Koncertek, Top 68/_MG_0038.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0040.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0049.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0050.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0053.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0054.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0057.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0059.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0061.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0064.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0001.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0002.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0003.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0004.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0006.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0008.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0009.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0014.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0016.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0018.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0022.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0025.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0026.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0027.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0034.jpeg" loading="lazy" alt="Top 68"></div>
+            <div class="gallery-item" data-category="concert-top68" data-aos="fade-up"><img src="kepek/koncert_top68/_MG_0038.jpeg" loading="lazy" alt="Top 68"></div>
 
-            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="images/Lévays események, Diáknagykövet/IMG_20240418_200516.jpg" loading="lazy" alt="Diáknagykövet"></div>
-            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="images/Lévays események, Diáknagykövet/IMG_20240418_203844.jpg" loading="lazy" alt="Diáknagykövet"></div>
-            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="images/Lévays események, Diáknagykövet/IMG_20240418_204219.jpg" loading="lazy" alt="Diáknagykövet"></div>
-            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="images/Lévays események, Diáknagykövet/IMG_20240121_160418.jpg" loading="lazy" alt="Diáknagykövet"></div>
-            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="images/Lévays események, Diáknagykövet/IMG_20240418_194217.jpg" loading="lazy" alt="Diáknagykövet"></div>
-            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="images/Lévays események, Diáknagykövet/IMG_20240418_195629.jpg" loading="lazy" alt="Diáknagykövet"></div>
+            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="kepek/levay_diaknagykovet/IMG_20240418_200516.jpg" loading="lazy" alt="Diáknagykövet"></div>
+            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="kepek/levay_diaknagykovet/IMG_20240418_203844.jpg" loading="lazy" alt="Diáknagykövet"></div>
+            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="kepek/levay_diaknagykovet/IMG_20240418_204219.jpg" loading="lazy" alt="Diáknagykövet"></div>
+            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="kepek/levay_diaknagykovet/IMG_20240121_160418.jpg" loading="lazy" alt="Diáknagykövet"></div>
+            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="kepek/levay_diaknagykovet/IMG_20240418_194217.jpg" loading="lazy" alt="Diáknagykövet"></div>
+            <div class="gallery-item" data-category="levay-diaknagykoved" data-aos="fade-up"><img src="kepek/levay_diaknagykovet/IMG_20240418_195629.jpg" loading="lazy" alt="Diáknagykövet"></div>
 
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/5.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/6.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/7.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/8.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/9.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/10.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/11.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/1.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/2.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/3.jpeg" loading="lazy" alt="Évnyitó"></div>
-            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="images/Lévays események, Évnyitó (25-26)/4.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/5.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/6.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/7.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/8.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/9.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/10.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/11.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/1.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/2.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/3.jpeg" loading="lazy" alt="Évnyitó"></div>
+            <div class="gallery-item" data-category="levay-evnyito" data-aos="fade-up"><img src="kepek/levay_evnyito/4.jpeg" loading="lazy" alt="Évnyitó"></div>
 
-            <div class="gallery-item" data-category="palyazat-ember" data-aos="fade-up"><img src="images/Pályázatra, Ember ábrázolás/Őszi csendélet.JPG" loading="lazy" alt="Ember ábrázolás"></div>
-            <div class="gallery-item" data-category="palyazat-ember" data-aos="fade-up"><img src="images/Pályázatra, Ember ábrázolás/Napsütötte zöld mező.jpeg" loading="lazy" alt="Ember ábrázolás"></div>
+            <div class="gallery-item" data-category="palyazat-ember" data-aos="fade-up"><img src="kepek/palyazat_ember/Őszi csendélet.JPG" loading="lazy" alt="Ember ábrázolás"></div>
+            <div class="gallery-item" data-category="palyazat-ember" data-aos="fade-up"><img src="kepek/palyazat_ember/Napsütötte zöld mező.jpeg" loading="lazy" alt="Ember ábrázolás"></div>
 
-            <div class="gallery-item" data-category="palyazat-nature" data-aos="fade-up"><img src="images/Pályázatra, Természet, Mehet/Ősz és Tél.jpeg" loading="lazy" alt="Természet"></div>
-            <div class="gallery-item" data-category="palyazat-nature" data-aos="fade-up"><img src="images/Pályázatra, Természet, Mehet/A csillagok örzője.jpeg" loading="lazy" alt="Természet"></div>
-            <div class="gallery-item" data-category="palyazat-nature" data-aos="fade-up"><img src="images/Pályázatra, Természet, Mehet/Csillagok alatt megpihenve.jpeg" loading="lazy" alt="Természet"></div>
+            <div class="gallery-item" data-category="palyazat-nature" data-aos="fade-up"><img src="kepek/palyazat_termeszet/Ősz és Tél.jpeg" loading="lazy" alt="Természet"></div>
+            <div class="gallery-item" data-category="palyazat-nature" data-aos="fade-up"><img src="kepek/palyazat_termeszet/A csillagok örzője.jpeg" loading="lazy" alt="Természet"></div>
+            <div class="gallery-item" data-category="palyazat-nature" data-aos="fade-up"><img src="kepek/palyazat_termeszet/Csillagok alatt megpihenve.jpeg" loading="lazy" alt="Természet"></div>
 
-            <div class="gallery-item" data-category="portrek-animal" data-aos="fade-up"><img src="images/Portrék, Állat/Nemes vad.jpeg" loading="lazy" alt="Állat"></div>
-            <div class="gallery-item" data-category="portrek-animal" data-aos="fade-up"><img src="images/Portrék, Állat/A szem a lélek tükre.jpeg" loading="lazy" alt="Állat"></div>
+            <div class="gallery-item" data-category="portrek-animal" data-aos="fade-up"><img src="kepek/portre_allat/Nemes vad.jpeg" loading="lazy" alt="Állat"></div>
+            <div class="gallery-item" data-category="portrek-animal" data-aos="fade-up"><img src="kepek/portre_allat/A szem a lélek tükre.jpeg" loading="lazy" alt="Állat"></div>
 
-            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="images/Portrék, Balázs Ákos/Havas derű.JPG" loading="lazy" alt="Portré"></div>
-            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="images/Portrék, Balázs Ákos/Hideg reggel egyedül.JPG" loading="lazy" alt="Portré"></div>
-            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="images/Portrék, Balázs Ákos/Ragyogó lélektükör.JPG" loading="lazy" alt="Portré"></div>
-            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="images/Portrék, Balázs Ákos/Titkos Kód.JPG" loading="lazy" alt="Portré"></div>
-            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="images/Portrék, Balázs Ákos/Amikor a tekintet mesél.JPG" loading="lazy" alt="Portré"></div>
-            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="images/Portrék, Balázs Ákos/Fagyos gondolatok.JPG" loading="lazy" alt="Portré"></div>
-            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="images/Portrék, Balázs Ákos/Gondtalan pillanat.JPG" loading="lazy" alt="Portré"></div>
+            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="kepek/portre_akos/Havas derű.JPG" loading="lazy" alt="Portré"></div>
+            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="kepek/portre_akos/Hideg reggel egyedül.JPG" loading="lazy" alt="Portré"></div>
+            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="kepek/portre_akos/Ragyogó lélektükör.JPG" loading="lazy" alt="Portré"></div>
+            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="kepek/portre_akos/Titkos Kód.JPG" loading="lazy" alt="Portré"></div>
+            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="kepek/portre_akos/Amikor a tekintet mesél.JPG" loading="lazy" alt="Portré"></div>
+            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="kepek/portre_akos/Fagyos gondolatok.JPG" loading="lazy" alt="Portré"></div>
+            <div class="gallery-item" data-category="portrek-akos" data-aos="fade-up"><img src="kepek/portre_akos/Gondtalan pillanat.JPG" loading="lazy" alt="Portré"></div>
 
-            <div class="gallery-item" data-category="portrek-testver" data-aos="fade-up"><img src="images/Portrék, Petya/Vágy a szabadságra.jpeg" loading="lazy" alt="Testvér"></div>
-            <div class="gallery-item" data-category="portrek-testver" data-aos="fade-up"><img src="images/Portrék, Petya/kész.jpg" loading="lazy" alt="Testvér"></div>
+            <div class="gallery-item" data-category="portrek-testver" data-aos="fade-up"><img src="kepek/portre_petya/Vágy a szabadságra.jpeg" loading="lazy" alt="Testvér"></div>
+            <div class="gallery-item" data-category="portrek-testver" data-aos="fade-up"><img src="kepek/portre_petya/kész.jpg" loading="lazy" alt="Testvér"></div>
 
         </div>
     </section>
@@ -827,14 +828,25 @@
 
         // --- GITHUB PAGES FIX: EREDETI ÚTVONALAK KÓDOLÁSA ---
         function fixOriginalImagePaths() {
+            const repoPath = "/portfolio/";
             document.querySelectorAll('img').forEach(img => {
                 let originalSrc = img.getAttribute('src');
-                // Ha az src egy relatív link és nem webes URL
                 if (originalSrc && !originalSrc.startsWith('http')) {
-                    // Az encodeURI megcsinálja a szóközökből a %20-at, ami a szervernek kell
-                    img.src = encodeURI(originalSrc);
+                    // Ha véletlenül kétszer futna le, ne tegye be duplán
+                    if (!originalSrc.startsWith(repoPath)) {
+                        // Kicseréljük az összes lehetséges elérési utat a letisztultra,
+                        // amiket az utolsó képen küldtél.
+                        let finalUrl = repoPath + originalSrc;
+                        img.src = encodeURI(finalUrl);
+                    }
                 }
             });
+            
+            // A fejléc háttérképének javítása
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.backgroundImage = `linear-gradient(rgba(34, 21, 24, 0.8), rgba(34, 21, 24, 1)), url('${encodeURI(repoPath + "kepek/hero-bg.jpg")}')`;
+            }
         }
         
         // Futtassuk a javítót rögtön!
